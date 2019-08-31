@@ -1,4 +1,4 @@
-# AlgorithmToRemember
+# Algorithm To Remember
 Collect necessary data structures and algorithms
 
 ## Linked List
