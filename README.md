@@ -2,7 +2,7 @@
 Collect necessary data structures and algorithms
 
 ## Linked List
-> 1. Linked List [C](/C/01.Linked_list)/[C++](/C++/01.Linked_list)<br>
+> 1. Linked List [C](/C/01.Linked_list.md)/[C++](/C++/01.Linked_list.md)<br>
 > 2. Doubly Linked List [C](/C/02.Doubly_Linked_List)/[C++](/C++/02.Doubly_Linked_List)<br>
 > 3. Circular Linked List [C](/C/03.Circular_Linked_list)/[C++](/C++/03.Circular_Linked_list)
 
