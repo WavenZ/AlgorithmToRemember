@@ -1,6 +1,8 @@
 # Algorithm To Remember
 Collect necessary data structures and algorithms
 
+-------------
+
 ## Linked List
 > 1. Linked List [C](/C/01.Linked_List.md)/[C++](/C++/01.Linked_List.md)<br>
 > 2. Doubly Linked List [C](/C/02.Doubly_Linked_List.md)/[C++](/C++/02.Doubly_Linked_List.md)<br>
@@ -23,4 +25,6 @@ Collect necessary data structures and algorithms
 > 11. AVL Tree [C](/C/11.AVL_Tree.md)/[C++](/C++/11.AVL_Tree.md)<br>
 > 12. B Tree [C](/C/12.B_Tree.md)/[C++](/C++/12.B_Tree.md)<br>
 > 13. Red Black Tree [C](/C/13.Red_Black_Tree.md)/[C++](/C++/13.Red_Black_Tree.md)
+
+-----------
 
