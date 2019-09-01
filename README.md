@@ -4,9 +4,9 @@ Collect necessary data structures and algorithms
 -------------
 
 ## Linked List
-> 1. Linked List [C](/C/01.Linked_List.md)/[C++](/C++/01.Linked_List.md)<br>
-> 2. Doubly Linked List [C](/C/02.Doubly_Linked_List.md)/[C++](/C++/02.Doubly_Linked_List.md)<br>
-> 3. Circular Linked List [C](/C/03.Circular_Linked_list.md)/[C++](/C++/03.Circular_Linked_list.md)
+> 1. 链表（Linked List） [C](/C/01.Linked_List.md)/[C++](/C++/01.Linked_List.md)<br>
+> 2. 双向链表（Doubly Linked List） [C](/C/02.Doubly_Linked_List.md)/[C++](/C++/02.Doubly_Linked_List.md)<br>
+> 3. 循环链表（Circular Linked List） [C](/C/03.Circular_Linked_list.md)/[C++](/C++/03.Circular_Linked_list.md)
 
 ## Stack & Queue
 > 4. Stack [C](/C/04.Stack.md)/[C++](/C++/04.Stack.md)<br>
@@ -27,4 +27,12 @@ Collect necessary data structures and algorithms
 > 13. Red Black Tree [C](/C/13.Red_Black_Tree.md)/[C++](/C++/13.Red_Black_Tree.md)
 
 -----------
+## Binary Search
+> 14. Binary Search [C](/C/14.Binary_Search.md)/[C++](/C++/14.Binary_Search.md)
+> 15. Binary Search Lower Bound [C](/C/15.Binary_Search_Lower_Bound.md)/[C++](/C++/15.Binary_Search_Lower_Bound.md)
+> 16. Binary Search Upper Bound [C](/C/16.Binary_Search_Upper_Bound.md)/[C++](/C++/16.Binary_Search_Upper_Bound.md)
 
+## Stable Sort
+> 17. Bubble Sort
+> 18. Insert Sort
+> 19. 
