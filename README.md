@@ -21,7 +21,7 @@ Collect necessary data structures and algorithms
 > 9. 开放寻址法（Open Addressing Hash） [C](/C/09.Open_Addressing_Hash.md)/[C++](/C++/09.Open_Addressing_Hash.md)/[Python](/Python/09.Open_Addressing_Hash.md)
 
 ## 树 Tree
-> 10. 二叉搜索树（Binary Search Tree） [C](/C/10.Binary_Search_Tree.md)/[C++](/C++/10.Binary_Search_Tree.md)<br>/[Python](/Python/10.Binary_Search_Tree.md)
+> 10. 二叉搜索树（Binary Search Tree） [C](/C/10.Binary_Search_Tree.md)/[C++](/C++/10.Binary_Search_Tree.md)/[Python](/Python/10.Binary_Search_Tree.md)<br>
 > 11. AVL树（AVL Tree） [C](/C/11.AVL_Tree.md)/[C++](/C++/11.AVL_Tree.md)/[Python](/Python/11.AVL_Tree.md)<br>
 > 12. B树（B Tree） [C](/C/12.B_Tree.md)/[C++](/C++/12.B_Tree.md)/[Python](/Python/12.B_Tree.md)<br>
 > 13. 红黑树（Red Black Tree） [C](/C/13.Red_Black_Tree.md)/[C++](/C++/13.Red_Black_Tree.md)/[Python](/Python/13.Red_Black_Tree.md)
