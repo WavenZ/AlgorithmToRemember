@@ -14,6 +14,22 @@ typedef struct Node{
 	struct Node* next;
 }Node, *LinkedList;
 
+
+
+typedef void (*callback)(ElemType);
+void LinkedList_Traverse(LinkedList L, callback func)
+{
+	if (L == NULL) return ERROR;
+	Node* p = L->next;
+	while (p) {
+		func(p->data);
+		p = p->next;
+	}
+	printf("\n");
+}
+void print(ElemType data) {
+	printf("%d ", data);
+}
 Status LinkedList_Init(LinkedList* L) {
 	// 链表初始化
 	*L = (LinkedList)malloc(sizeof(Node));
@@ -85,38 +101,103 @@ Status LinkedList_Delete(LinkedList L, int i) {
 	return OK;
 }
 Status LinkedList_Reverse(LinkedList L) {
-
+	// 三指针法
+	if (L == NULL) return ERROR;	// 链表未初始化
+	if (L->next == NULL || L->next->next == NULL) return OK;	// 链表为空或者只有一个结点无需反转
+	Node* p = L->next, * q = L->next->next, * r = L->next->next->next;
+	p->next = NULL;	// 第一个结点的next置空
+	while (r != NULL)	// 如果下一个结点不为空
+	{
+		q->next = p;	
+		p = q; q = r; r = r->next;
+	}
+	q->next = p;
+	L->next = q;
+	return OK;
 }
 
-
-typedef void (*callback)(ElemType);
-void LinkedList_Traverse(LinkedList L, callback func)
+Node* LinkedList_Mid(LinkedList L)
+{
+	if (L == NULL) return NULL;
+	Node* fast = L, * slow = L;
+	while (fast != NULL && fast->next != NULL) {
+		fast = fast->next->next;
+		slow = slow->next;
+	}
+	return slow;
+}
+Node* LinkedList_KToEnd(LinkedList L, int k)
+{
+	if (L == NULL) return NULL;
+	Node* fast = L, * slow = L;
+	while (k-- && fast != NULL) {
+		fast = fast->next;
+	}
+	while (fast != NULL) {
+		fast = fast->next;
+		slow = slow->next;
+	}
+	return slow;
+}
+Status LinkedList_BubbleSort(LinkedList L)
 {
 	if (L == NULL) return ERROR;
-	Node* p = L->next;
-	while (p) {
-		func(p->data);
-		p = p->next;
+	Node * p = L, * q = L->next, *r = NULL;
+	while (r != L->next) {
+		while (q->next != NULL && q->next != r) {
+			if (q->data < q->next->data) {	// 小于，指针后移
+				p = q;
+				q = q->next;
+			}
+			else {	// 大于，交换
+				p->next = q->next;
+				q->next = q->next->next;
+				p->next->next = q;
+				p = p->next;
+			}
+		}
+		r = q;
+		p = L;
+		q = L->next;
 	}
+	return OK;
+}
+void LinkedList_Merge(LinkedList L1, LinkedList L2)
+{	
+	// 将L2合并到L1上
+	if (L1 == NULL || L2 == NULL) return ERROR;
+	Node* pa = L1->next, * pb = L2->next, * p = L1;
+	while (pa && pb)
+	{
+		if (pa->data < pb->data) {
+			p->next = pa; p = pa; pa = pa->next;
+		}
+		else {
+			p->next = pb; p = pb; pb = pb->next;
+		}
+	}
+	p->next = pa ? pa : pb;
+	free(L2);
 }
 
 
-void print(ElemType data) {
-	printf("%d ", data);
-}
 int main(void) {
-	LinkedList L = NULL;
-	// LinkedList_Init(&L);
+	int data1[] = { 4, 10, 8, 12, 19, 3, 15, 7, 16, 0 };
+	int data2[] = { 2, 11, 1, 6, 5, 18, 17, 9, 14, 13 };
+	LinkedList L1 = NULL, L2 = NULL;
+	LinkedList_Init(&L1);
+	LinkedList_Init(&L2);
 	for (int i = 0; i < 10; ++i) {
-		LinkedList_Push_back(L, i);
+		LinkedList_Push_back(L1, data1[i]);
+		LinkedList_Push_back(L2, data2[i]);
 	}
-	LinkedList_Traverse(L, print);
-	printf("\n");
-	LinkedList_Delete(L, 9);
-	LinkedList_Traverse(L, print);
-	printf("\n");
-	LinkedList_Insert(L, 0, 9);
-	LinkedList_Traverse(L, print);
-	printf("\n");
+	LinkedList_Traverse(L1, print);
+	LinkedList_Traverse(L2, print);
+	LinkedList_BubbleSort(L1);
+	LinkedList_BubbleSort(L2);
+	LinkedList_Traverse(L1, print);
+	LinkedList_Traverse(L2, print);
+	LinkedList_Merge(L1, L2);
+	LinkedList_Traverse(L1, print);
 	return 0;
 }
