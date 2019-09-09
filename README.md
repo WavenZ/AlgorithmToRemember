@@ -6,7 +6,6 @@ Collect necessary data structures and algorithms
 ## 1. 链表 Linked List
 > 1. 链表（Linked List） [C](/C/01.Linked_List.md)/[C++](/C++/01.Linked_List.md)/[Python](/Python/01.Linked_List.md)<br>
 > 2. 双向链表（Doubly Linked List） [C](/C/02.Doubly_Linked_List.md)/[C++](/C++/02.Doubly_Linked_List.md)/[Python](/Python/02.Doubly_Linked_List.md)<br>
-> 3. 循环链表（Circular Linked List） [C](/C/03.Circular_Linked_list.md)/[C++](/C++/03.Circular_Linked_list.md)/[Python](/Python/03.Circular_Linked_list.md)
 
 ## 2. 栈与队列 Stack & Queue
 > 4. 栈（Stack） [C](/C/04.Stack.md)/[C++](/C++/04.Stack.md)/[Python](/Python/04.Stack.md)<br>
