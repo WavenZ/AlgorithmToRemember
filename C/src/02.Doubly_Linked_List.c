@@ -29,7 +29,7 @@ void DoublyLinkedList_Traverse(DoublyLinkedList L, callback visit)
 	printf("\n");
 }
 
-Status LinkedList_Init(DoublyLinkedList* L) {
+Status DoublyLinkedList_Init(DoublyLinkedList* L) {
 	// 链表初始化
 	*L = (DoublyLinkedList)malloc(sizeof(Node));
 	if (!(*L)) return ERROR;
