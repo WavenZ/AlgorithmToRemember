@@ -107,17 +107,17 @@ void print(ElemType data) {
 
 int main(void) {
 	DoublyLinkedList L;
-	LinkedList_Init(&L);
+	DoublyLinkedList_Init(&L);
 	for (int i = 0; i < 10; ++i)
-		LinkedList_Push_back(L, i);
-	LinkedList_Insert(L, 0, 250);
-	LinkedList_Insert(L, 11, 250);
-	LinkedList_Traverse(L, print);
+		DoublyLinkedList_Push_back(L, i);
+	DoublyLinkedList_Insert(L, 0, 250);
+	DoublyLinkedList_Insert(L, 11, 250);
+	DoublyLinkedList_Traverse(L, print);
 	
-	LinkedList_Delete(L, 0);
-	LinkedList_Traverse(L, print);
+	DoublyLinkedList_Delete(L, 0);
+	DoublyLinkedList_Traverse(L, print);
 	
-	LinkedList_Delete(L, 10);
-	LinkedList_Traverse(L, print);
+	DoublyLinkedList_Delete(L, 10);
+	DoublyLinkedList_Traverse(L, print);
 	return 0;
 }
