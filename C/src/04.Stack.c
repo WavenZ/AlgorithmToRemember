@@ -52,7 +52,9 @@ Status Stack_Pop(Stack S) {
 		return ERROR;
 	}
 	else {
+		Node* p = S->next;
 		S->next = S->next->next;
+		free(p);
 		return OK;
 	}
 }
