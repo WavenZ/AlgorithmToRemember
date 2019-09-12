@@ -13,7 +13,7 @@ typedef int ElemType;
 void MAX_HEAPIFY(ElemType* A, int length, int i) {
 	int l = LEFT(i);
 	int r = RIGHT(i);
-	ElemType largest = i;
+	int largest = i;
 	if (l <= length && A[l] > A[largest])
 		largest = l;
 
