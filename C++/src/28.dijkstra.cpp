@@ -41,25 +41,26 @@ public:
 			if (G.V[i]->id == id)
 				G.V[i]->d = 0;
 	}
-	void relax(Edge& edge) {
+	void relax(priority_queue<shared_ptr<Vertex>>& Q, Edge& edge) {
 		// Relaxation operation
 		if (edge.v->d > edge.u->d + edge.w) {
 			edge.v->d = edge.u->d + edge.w;
 			edge.v->p = edge.u;
+			Q.push(edge.v);
 		}
 	}
 	void shortest_paths(int id) {
 		// Dijkstra algorithm main process
 		initialize_single_source(id);
-		vector<shared_ptr<Vertex>> S;
+		vector<int> S(G.V.size(), 0);
 		priority_queue<shared_ptr<Vertex>> Q;
-		for (int i = 0; i < G.V.size(); ++i)
-			Q.push(G.V[i]);
+		Q.push(G.V[id]);
 		while (!Q.empty()) {
 			shared_ptr<Vertex> u = Q.top(); Q.pop();
-			S.push_back(u);
+			if (S[u->id]) continue;
+			S[u->id] = 1;
 			for (int i = 0; i < G.Adj[u->id].size(); ++i)
-				relax(G.Adj[u->id][i]);
+				relax(Q, G.Adj[u->id][i]);
 		}
 	}
 	void print_path(unsigned i) {
